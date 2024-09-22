@@ -44,7 +44,7 @@ jobs:
       - name: Semantic release
         run: echo ${GH_TOKEN:0:5} && npx semantic-release --debug
         env:
-          GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_PAT }}
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_PAT }}
 
   release-stage:
     name: "Release stage"
