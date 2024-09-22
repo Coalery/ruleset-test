@@ -42,7 +42,7 @@ jobs:
       - name: Wait 5 seconds
         run: sleep 5
       - name: Semantic release
-        run: echo ${GH_TOKEN:0:5} && npx semantic-release
+        run: echo ${GH_TOKEN:0:5} && npx semantic-release --debug
         env:
           GH_TOKEN: ${{ secrets.SEMANTIC_RELEASE_PAT }}
 
