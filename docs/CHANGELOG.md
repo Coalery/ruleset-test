@@ -1,3 +1,10 @@
+## [1.0.0-rc.2](https://github.com/Coalery/ruleset-test/compare/v1.0.0-rc.1...v1.0.0-rc.2) (2024-09-22)
+
+
+### CI
+
+* remove debug flag on semantic release ([1f0079e](https://github.com/Coalery/ruleset-test/commit/1f0079ed247b4741df13017c34c7fd0523d4a999))
+
 ## 1.0.0-rc.1 (2024-09-22)
 
 
