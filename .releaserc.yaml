@@ -5,7 +5,6 @@ branches:
     prerelease: 'rc'
     channel: 'next'
 
-repositoryUrl: 'https://github.com/Coalery/ruleset-test.git'
 preset: 'conventionalcommits'
 tagFormat: 'v${version}'
 plugins:
