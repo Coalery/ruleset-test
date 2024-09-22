@@ -1,0 +1,27 @@
+{
+  "name": "ruleset-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coalery/ruleset-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Coalery/ruleset-test/issues"
+  },
+  "homepage": "https://github.com/Coalery/ruleset-test#readme",
+  "devDependencies": {
+    "@saithodev/semantic-release-backmerge": "^2.1.3",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.5"
+  }
+}

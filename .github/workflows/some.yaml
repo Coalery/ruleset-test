@@ -1,0 +1,48 @@
+name: some
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lock-stage:
+    name: Lock stage
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Lock
+        run: |
+          curl \
+            -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Authorization: Bearer ${{ secrets.API_PAT }}"
+            https://api.github.com/repos/${{ github.repository }}/rulesets \
+            -d '{"name":"Lock until deploy completed","enforcement":"active","target":"branch","bypass_actors":[],"conditions":{"ref_name":{"include":["refs/heads/stage"]}},"rules":[{"type":"update"}]}'
+  test-job:
+    name: Test job
+    needs: lock-stage
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: "**/package-lock.json"
+      - name: Install dependencies
+        run: npm ci
+      - name: Wait 5 seconds
+        run: sleep 5
+      - name: Semantic release
+        run: npx semantic-release
+        env:
+          API_PAT: ${{ secrets.API_PAT }}
+      - name: Release lock from stage
+        run: |
+          curl \
+            -X DELETE \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Authorization: Bearer ${{ secrets.API_PAT }}"
+            https://api.github.com/repos/${{ github.repository }}/rulesets \
+            -d '{"ref":"refs/heads/stage"}'
