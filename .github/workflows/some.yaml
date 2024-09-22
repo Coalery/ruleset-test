@@ -4,21 +4,31 @@ on:
   push:
     branches:
       - main
+      - stage
 
 jobs:
   lock-stage:
     name: Lock stage
     runs-on: ubuntu-22.04
+    if: github.ref == 'refs/heads/main'
+
+    outputs:
+      rulesetId: ${{ steps.locking.outputs.rulesetId }}
+
     steps:
-      - name: Lock
+      - name: Lock stage branch with ruleset
+        id: locking
         run: |
-          curl \
+          rulesetId = $(curl \
             -X POST \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Authorization: Bearer ${{ secrets.API_PAT }}"
             https://api.github.com/repos/${{ github.repository }}/rulesets \
-            -d '{"name":"Lock until deploy completed","enforcement":"active","target":"branch","bypass_actors":[],"conditions":{"ref_name":{"include":["refs/heads/stage"]}},"rules":[{"type":"update"}]}'
+            -d '{"name":"Lock until deploy completed","enforcement":"active","target":"branch","bypass_actors":[],"conditions":{"ref_name":{"include":["refs/heads/stage"]}},"rules":[{"type":"update"}]}' \
+            | jq -r '.id')
+          echo "rulesetId=$rulesetId" >> $GITHUB_ENV
+
   test-job:
     name: Test job
     needs: lock-stage
@@ -37,12 +47,22 @@ jobs:
         run: npx semantic-release
         env:
           API_PAT: ${{ secrets.API_PAT }}
+
+  release-stage:
+    name: "Release stage"
+    runs-on: ubuntu-22.04
+    if: github.ref == 'refs/heads/main'
+
+    needs:
+      - lock-stage
+      - test-job
+
+    steps:
       - name: Release lock from stage
         run: |
-          curl \
+          curl -L \
             -X DELETE \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Authorization: Bearer ${{ secrets.API_PAT }}"
-            https://api.github.com/repos/${{ github.repository }}/rulesets \
-            -d '{"ref":"refs/heads/stage"}'
+            https://api.github.com/repos/${{ github.repository }}/rulesets/${{ needs.lock-stage.outputs.rulesetId }}
