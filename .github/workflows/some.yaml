@@ -44,7 +44,7 @@ jobs:
       - name: Semantic release
         run: npx semantic-release
         env:
-          API_PAT: ${{ secrets.API_PAT }}
+          API_PAT: ${{ secrets.SEMANTIC_RELEASE_PAT }}
 
   release-stage:
     name: "Release stage"
