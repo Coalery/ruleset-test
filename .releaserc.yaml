@@ -1,0 +1,91 @@
+---
+branches:
+  - main
+  - name: stage
+    prerelease: 'rc'
+    channel: 'next'
+
+preset: 'conventionalcommits'
+tagFormat: 'v${version}'
+plugins:
+  - '@semantic-release/commit-analyzer'
+  - '@semantic-release/release-notes-generator'
+  - '@semantic-release/changelog'
+  - '@semantic-release/exec'
+  - '@saithodev/semantic-release-backmerge'
+  - '@semantic-release/git'
+  - '@semantic-release/github'
+
+verifyConditions:
+  - '@semantic-release/git'
+  - '@semantic-release/github'
+  - path: '@saithodev/semantic-release-backmerge'
+    branches:
+      - from: main
+        to: stage
+    backmergeStrategy: 'merge'
+
+analyzeCommits:
+  - path: '@semantic-release/commit-analyzer'
+    releaseRules:
+      - type: refactor
+        release: patch
+      - type: build
+        release: patch
+      - type: ci
+        release: patch
+      - type: hotfix
+        release: patch
+      - type: perf
+        release: patch
+      - type: docs
+        scope: README
+        release: patch
+    parserOpts:
+      noteKeywords:
+        - BREAKING CHANGE
+        - BREAKING CHANGES
+
+generateNotes:
+  - path: '@semantic-release/release-notes-generator'
+    writerOpts:
+      groupBy: 'type'
+      commitGroupsSort:
+        - 'feat'
+        - 'perf'
+        - 'fix'
+        - 'hotfix'
+      commitsSort: 'header'
+    presetConfig:
+      types:
+        - type: 'feat'
+          section: 'Features'
+        - type: 'hotfix'
+          section: 'Bug Fixes'
+        - type: 'fix'
+          section: 'Bug Fixes'
+        - type: perf
+          section: Performance
+        - type: refactor
+          section: Refactoring
+        - type: build
+          section: Build
+        - type: ci
+          section: CI
+
+prepare:
+  - path: '@semantic-release/exec'
+    prepareCmd: |
+      sed -i "s/\(\"version.*: \"\).*/\1${nextRelease.version}\",/g" package.json
+  - path: '@semantic-release/changelog'
+    changelogFile: 'docs/CHANGELOG.md'
+  - path: '@semantic-release/git'
+    assets:
+      - 'docs/CHANGELOG.md'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'npm-shrinkwrap.json'
+    message: "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+  - path: '@semantic-release/exec'
+    prepareCmd: |
+      echo "prepared"
