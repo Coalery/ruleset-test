@@ -1,3 +1,10 @@
+## [1.1.0-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.0.0...v1.1.0-rc.1) (2024-09-23)
+
+
+### Features
+
+* 썸띵 ([#5](https://github.com/Coalery/ruleset-test/issues/5)) ([1ffef4a](https://github.com/Coalery/ruleset-test/commit/1ffef4a4f6829d8ea89258bbb3602a64f18856c6))
+
 ## 1.0.0 (2024-09-23)
 
 
