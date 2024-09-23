@@ -1,3 +1,10 @@
+## [1.1.0-rc.2](https://github.com/Coalery/ruleset-test/compare/v1.1.0-rc.1...v1.1.0-rc.2) (2024-09-23)
+
+
+### Bug Fixes
+
+* yoooo ([#6](https://github.com/Coalery/ruleset-test/issues/6)) ([7b6f014](https://github.com/Coalery/ruleset-test/commit/7b6f014ba9b556963680a283f5ee3dba5dce6a34))
+
 ## [1.1.0-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.0.0...v1.1.0-rc.1) (2024-09-23)
 
 
