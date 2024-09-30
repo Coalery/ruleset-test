@@ -1,3 +1,10 @@
+## [1.1.2-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.1...v1.1.2-rc.1) (2024-09-30)
+
+
+### CI
+
+* 역슬래시 누락 추가 및 sleep 초 증가 ([bd544de](https://github.com/Coalery/ruleset-test/commit/bd544de4b053bd3c193d1cd3e9fbf5a958781be7))
+
 ## [1.1.1](https://github.com/Coalery/ruleset-test/compare/v1.1.0...v1.1.1) (2024-09-30)
 
 
