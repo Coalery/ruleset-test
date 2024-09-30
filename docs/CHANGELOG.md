@@ -1,3 +1,21 @@
+## [1.1.0](https://github.com/Coalery/ruleset-test/compare/v1.0.0...v1.1.0) (2024-09-30)
+
+
+### CI
+
+* backmerge option 이름 수정 ([484fdcd](https://github.com/Coalery/ruleset-test/commit/484fdcd9d754323b82f5efbf3669426a1e68798d))
+* success step에 backmerge config 추가 ([08372e1](https://github.com/Coalery/ruleset-test/commit/08372e10905ce0dfc8da6f87f1e4c035e1a47dc4))
+
+
+### Bug Fixes
+
+* yoooo ([#6](https://github.com/Coalery/ruleset-test/issues/6)) ([7b6f014](https://github.com/Coalery/ruleset-test/commit/7b6f014ba9b556963680a283f5ee3dba5dce6a34))
+
+
+### Features
+
+* 썸띵 ([#5](https://github.com/Coalery/ruleset-test/issues/5)) ([1ffef4a](https://github.com/Coalery/ruleset-test/commit/1ffef4a4f6829d8ea89258bbb3602a64f18856c6))
+
 ## [1.1.0-rc.4](https://github.com/Coalery/ruleset-test/compare/v1.1.0-rc.3...v1.1.0-rc.4) (2024-09-30)
 
 
