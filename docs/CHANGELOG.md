@@ -1,3 +1,10 @@
+## [1.1.2-rc.2](https://github.com/Coalery/ruleset-test/compare/v1.1.2-rc.1...v1.1.2-rc.2) (2024-09-30)
+
+
+### CI
+
+* exclude param 추가 ([acdeeff](https://github.com/Coalery/ruleset-test/commit/acdeeff16b0fe4f622b95d19e153c743db18e658))
+
 ## [1.1.2-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.1...v1.1.2-rc.1) (2024-09-30)
 
 
