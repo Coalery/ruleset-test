@@ -1,3 +1,10 @@
+## [1.1.3-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.2...v1.1.3-rc.1) (2024-09-30)
+
+
+### CI
+
+* committer 이메일 변경 ([25d21de](https://github.com/Coalery/ruleset-test/commit/25d21debf9a4deac49153a4e613c53dbd6ee7c76))
+
 ## [1.1.2](https://github.com/Coalery/ruleset-test/compare/v1.1.1...v1.1.2) (2024-09-30)
 
 ### CI
