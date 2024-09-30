@@ -1,3 +1,10 @@
+## [1.1.1-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.0...v1.1.1-rc.1) (2024-09-30)
+
+
+### CI
+
+* 공백 및 누락된 multiline 역슬래시 추가 ([42a581f](https://github.com/Coalery/ruleset-test/commit/42a581fec0beb8cb102dac6d6496adbd03500a53))
+
 ## [1.1.0](https://github.com/Coalery/ruleset-test/compare/v1.0.0...v1.1.0) (2024-09-30)
 
 
