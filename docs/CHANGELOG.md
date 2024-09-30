@@ -1,3 +1,10 @@
+## [1.1.0-rc.3](https://github.com/Coalery/ruleset-test/compare/v1.1.0-rc.2...v1.1.0-rc.3) (2024-09-30)
+
+
+### CI
+
+* backmerge option 이름 수정 ([484fdcd](https://github.com/Coalery/ruleset-test/commit/484fdcd9d754323b82f5efbf3669426a1e68798d))
+
 ## [1.1.0-rc.2](https://github.com/Coalery/ruleset-test/compare/v1.1.0-rc.1...v1.1.0-rc.2) (2024-09-23)
 
 
