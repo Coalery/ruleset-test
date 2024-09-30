@@ -20,7 +20,7 @@ verifyConditions:
   - '@semantic-release/git'
   - '@semantic-release/github'
   - path: '@saithodev/semantic-release-backmerge'
-    branches:
+    backmergeBranches:
       - from: main
         to: stage
     backmergeStrategy: 'merge'
