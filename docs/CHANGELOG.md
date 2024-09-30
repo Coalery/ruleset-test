@@ -1,3 +1,10 @@
+## [1.1.0-rc.4](https://github.com/Coalery/ruleset-test/compare/v1.1.0-rc.3...v1.1.0-rc.4) (2024-09-30)
+
+
+### CI
+
+* success step에 backmerge config 추가 ([08372e1](https://github.com/Coalery/ruleset-test/commit/08372e10905ce0dfc8da6f87f1e4c035e1a47dc4))
+
 ## [1.1.0-rc.3](https://github.com/Coalery/ruleset-test/compare/v1.1.0-rc.2...v1.1.0-rc.3) (2024-09-30)
 
 

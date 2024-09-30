@@ -20,7 +20,7 @@ verifyConditions:
   - '@semantic-release/git'
   - '@semantic-release/github'
   - path: '@saithodev/semantic-release-backmerge'
-    backmergeBranches:
+    branches:
       - from: main
         to: stage
     backmergeStrategy: 'merge'
@@ -89,3 +89,10 @@ prepare:
   - path: '@semantic-release/exec'
     prepareCmd: |
       echo "prepared"
+
+success:
+  - path: '@saithodev/semantic-release-backmerge'
+    branches:
+      - from: main
+        to: stage
+    backmergeStrategy: merge
