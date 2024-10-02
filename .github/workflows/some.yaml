@@ -33,6 +33,9 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
@@ -41,7 +44,7 @@ jobs:
       - name: Wait 10 seconds
         run: sleep 10
       - name: Semantic release
-        run: npx semantic-release
+        run: npx semantic-release --ci
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_PAT }}
           GIT_AUTHOR_NAME: Coalery
