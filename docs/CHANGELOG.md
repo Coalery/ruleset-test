@@ -1,3 +1,10 @@
+## [1.1.12-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.11...v1.1.12-rc.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* remove unusable debugging echo ([869f4e8](https://github.com/Coalery/ruleset-test/commit/869f4e878c679e320600108cdffbed2d7ebe0531))
+
 ## [1.1.11](https://github.com/Coalery/ruleset-test/compare/v1.1.10...v1.1.11) (2024-10-02)
 
 
