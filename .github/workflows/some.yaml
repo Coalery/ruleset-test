@@ -13,7 +13,7 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     outputs:
-      rulesetId: ${{ steps.locking.outputs.rulesetId }}
+      RULESET_ID: ${{ steps.locking.outputs.RULESET_ID }}
 
     steps:
       - name: Lock stage branch with ruleset
@@ -28,7 +28,8 @@ jobs:
           echo $response
 
           rulesetId=$(echo $response | jq -r '.id')
-          echo "rulesetId=$rulesetId" >> $GITHUB_ENV
+          echo "$rulesetId"
+          echo "RULESET_ID=$rulesetId" >> $GITHUB_ENV
 
   test-job:
     name: Test job
@@ -62,9 +63,10 @@ jobs:
     steps:
       - name: Release lock from stage
         run: |
+          echo "RULESET_ID=${{ needs.lock-stage.outputs.RULESET_ID }}"
           curl -s -L \
             -X DELETE \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
             -H "Authorization: Bearer ${{ secrets.API_PAT }}" \
-            https://api.github.com/repos/${{ github.repository }}/rulesets/${{ needs.lock-stage.outputs.rulesetId }}
+            https://api.github.com/repos/${{ github.repository }}/rulesets/${{ needs.lock-stage.outputs.RULESET_ID }}

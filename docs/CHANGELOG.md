@@ -1,3 +1,10 @@
+## [1.1.9-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.8...v1.1.9-rc.1) (2024-10-02)
+
+
+### CI
+
+* add echo for output debugging ([3358542](https://github.com/Coalery/ruleset-test/commit/3358542063adefb8337db01b3c33199e6010608a))
+
 ## [1.1.8](https://github.com/Coalery/ruleset-test/compare/v1.1.7...v1.1.8) (2024-10-02)
 
 
