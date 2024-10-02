@@ -1,3 +1,10 @@
+## [1.1.6-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.5...v1.1.6-rc.1) (2024-10-02)
+
+
+### CI
+
+* echo ruleset id, remove author email, name ([34a81e9](https://github.com/Coalery/ruleset-test/commit/34a81e9bece094faba5db7b7f7b31142c40331d6))
+
 ## [1.1.5](https://github.com/Coalery/ruleset-test/compare/v1.1.4...v1.1.5) (2024-10-02)
 
 
