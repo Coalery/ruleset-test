@@ -1,3 +1,11 @@
+## [1.1.10](https://github.com/Coalery/ruleset-test/compare/v1.1.9...v1.1.10) (2024-10-02)
+
+
+### CI
+
+* change github env to github output ([a0f6765](https://github.com/Coalery/ruleset-test/commit/a0f67656f1ac931ccac2464c47a88c1660b915d2))
+* remove unusable ci flag ([f07ca16](https://github.com/Coalery/ruleset-test/commit/f07ca1642c16ffab1f1bafb1860ef3b205111688))
+
 ## [1.1.10-rc.2](https://github.com/Coalery/ruleset-test/compare/v1.1.10-rc.1...v1.1.10-rc.2) (2024-10-02)
 
 
