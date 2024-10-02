@@ -25,10 +25,8 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.API_PAT }}" \
             https://api.github.com/repos/${{ github.repository }}/rulesets \
             -d '{"name":"Lock until deploy completed","enforcement":"active","target":"branch","bypass_actors":[{"actor_id":5,"actor_type":"RepositoryRole","bypass_mode":"always"}],"conditions":{"ref_name":{"include":["refs/heads/stage"],"exclude":[]}},"rules":[{"type":"update"}]}')
-          echo $response
 
           rulesetId=$(echo $response | jq -r '.id')
-          echo "$rulesetId"
           echo "RULESET_ID=$rulesetId" >> $GITHUB_OUTPUT
 
   test-job:
@@ -63,7 +61,6 @@ jobs:
     steps:
       - name: Release lock from stage
         run: |
-          echo "RULESET_ID=${{ needs.lock-stage.outputs.RULESET_ID }}"
           curl -s -L \
             -X DELETE \
             -H "Accept: application/vnd.github+json" \
