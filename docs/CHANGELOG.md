@@ -1,3 +1,17 @@
+## [1.1.8-rc.2](https://github.com/Coalery/ruleset-test/compare/v1.1.8-rc.1...v1.1.8-rc.2) (2024-10-02)
+
+
+### CI
+
+* reduce waiting seconds ([172d340](https://github.com/Coalery/ruleset-test/commit/172d340e7cdd639047e48575918cdd2486cf6bb4))
+
+## [1.1.8-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.7...v1.1.8-rc.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* trigger action ([91b34ca](https://github.com/Coalery/ruleset-test/commit/91b34ca18350a5dcfc61e4f42f59a8b46bec4e86))
+
 ## [1.1.7](https://github.com/Coalery/ruleset-test/compare/v1.1.6...v1.1.7) (2024-10-02)
 
 
