@@ -1,3 +1,10 @@
+## [1.1.5-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.4...v1.1.5-rc.1) (2024-10-02)
+
+
+### Bug Fixes
+
+* trigger action ([c5291f2](https://github.com/Coalery/ruleset-test/commit/c5291f21b04f0fad6689075909adc947f3dd98ed))
+
 ## [1.1.4](https://github.com/Coalery/ruleset-test/compare/v1.1.3...v1.1.4) (2024-10-02)
 
 
