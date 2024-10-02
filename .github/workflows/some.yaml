@@ -29,7 +29,7 @@ jobs:
 
           rulesetId=$(echo $response | jq -r '.id')
           echo "$rulesetId"
-          echo "RULESET_ID=$rulesetId" >> $GITHUB_ENV
+          echo "RULESET_ID=$rulesetId" >> $GITHUB_OUTPUT
 
   test-job:
     name: Test job
@@ -47,7 +47,7 @@ jobs:
       - name: Wait 3 seconds
         run: sleep 3
       - name: Semantic release
-        run: npx semantic-release --ci
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_PAT }}
 
