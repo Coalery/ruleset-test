@@ -1,3 +1,15 @@
+## [1.1.12](https://github.com/Coalery/ruleset-test/compare/v1.1.11...v1.1.12) (2024-10-02)
+
+
+### CI
+
+* 테스트를 위해 exit 1 추가 및 always 조건 추가 ([cff1c20](https://github.com/Coalery/ruleset-test/commit/cff1c202f4f455ace8b44316f2dc7553362f98ca))
+
+
+### Bug Fixes
+
+* remove unusable debugging echo ([869f4e8](https://github.com/Coalery/ruleset-test/commit/869f4e878c679e320600108cdffbed2d7ebe0531))
+
 ## [1.1.12-rc.2](https://github.com/Coalery/ruleset-test/compare/v1.1.12-rc.1...v1.1.12-rc.2) (2024-10-02)
 
 
