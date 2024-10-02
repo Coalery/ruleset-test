@@ -1,3 +1,10 @@
+## [1.1.7-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.6...v1.1.7-rc.1) (2024-10-02)
+
+
+### CI
+
+* lock stage api 수정 ([e070985](https://github.com/Coalery/ruleset-test/commit/e07098573c56eff8cc3a1db5e62120b52cf344aa))
+
 ## [1.1.6](https://github.com/Coalery/ruleset-test/compare/v1.1.5...v1.1.6) (2024-10-02)
 
 
