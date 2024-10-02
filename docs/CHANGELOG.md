@@ -1,3 +1,19 @@
+## [1.1.5](https://github.com/Coalery/ruleset-test/compare/v1.1.4...v1.1.5) (2024-10-02)
+
+
+### CI
+
+* disable persist credentials, add ci flag ([3d7555c](https://github.com/Coalery/ruleset-test/commit/3d7555c19054e8d399c8cca1c0256b6924b7bd08))
+
+
+### Bug Fixes
+
+* trigger action ([b1d8b5e](https://github.com/Coalery/ruleset-test/commit/b1d8b5e35d91e47e86a33838703f0e0f5a763f6d))
+* trigger action ([d99b231](https://github.com/Coalery/ruleset-test/commit/d99b231e308d1505b82a3aee2a925d1e82056dfe))
+* trigger action ([7af6bb7](https://github.com/Coalery/ruleset-test/commit/7af6bb7452e7ce53e6244f65dfb5d57a10fa75bc))
+* trigger action ([c5291f2](https://github.com/Coalery/ruleset-test/commit/c5291f21b04f0fad6689075909adc947f3dd98ed))
+* trigger ci ([2a79286](https://github.com/Coalery/ruleset-test/commit/2a79286a087d89a93c8dc0eb65adc4821d93bf78))
+
 ## [1.1.5-rc.3](https://github.com/Coalery/ruleset-test/compare/v1.1.5-rc.2...v1.1.5-rc.3) (2024-10-02)
 
 
