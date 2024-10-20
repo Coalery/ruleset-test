@@ -1,3 +1,10 @@
+## [1.1.14-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.13...v1.1.14-rc.1) (2024-10-20)
+
+
+### CI
+
+* 생성되는 branch ruleset의 이름 변경 ([c1eed77](https://github.com/Coalery/ruleset-test/commit/c1eed7780da9e35c518535d45e887eb28f11ef48))
+
 ## [1.1.13](https://github.com/Coalery/ruleset-test/compare/v1.1.12...v1.1.13) (2024-10-20)
 
 
