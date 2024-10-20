@@ -1,3 +1,10 @@
+## [1.1.13-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.12...v1.1.13-rc.1) (2024-10-20)
+
+
+### CI
+
+* actor 정보 추가 ([00e247e](https://github.com/Coalery/ruleset-test/commit/00e247e6c942a3cf213bcf3a2b4c8e2f0c9fe3e9))
+
 ## [1.1.12](https://github.com/Coalery/ruleset-test/compare/v1.1.11...v1.1.12) (2024-10-02)
 
 
