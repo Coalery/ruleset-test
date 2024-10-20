@@ -48,8 +48,6 @@ jobs:
         run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_PAT }}
-      - name: exit 1
-        run: exit 1
 
   release-stage:
     name: "Release stage"
