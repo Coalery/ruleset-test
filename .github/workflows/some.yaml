@@ -10,7 +10,7 @@ jobs:
   lock-stage:
     name: Lock stage
     if: github.ref == 'refs/heads/main'
-    uses: Coalery/ruleset-test/.github/workflows/branch-lock.yaml@stage
+    uses: ./.github/workflows/branch-lock.yaml
     with:
       branch-name: stage
     secrets:
@@ -42,7 +42,7 @@ jobs:
     needs:
       - lock-stage
       - test-job
-    uses: Coalery/ruleset-test/.github/workflows/branch-unlock.yaml@stage
+    uses: ./.github/workflows/branch-unlock.yaml
     with:
       ruleset-id: ${{ needs.lock-stage.outputs.ruleset-id }}
     secrets:
