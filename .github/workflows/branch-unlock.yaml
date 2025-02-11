@@ -3,13 +3,13 @@ name: branch-locker
 on:
   workflow_call:
     inputs:
-      github-token:
-        type: string
-        description: 'GitHub Token'
-        required: true
       ruleset-id:
         type: string
-        description: 'Target ruleset id to remove'
+        description: "Target ruleset id to remove"
+        required: true
+    secrets:
+      github-token:
+        description: "GitHub Token"
         required: true
 
 jobs:
@@ -26,5 +26,5 @@ jobs:
             -X DELETE \
             -H "Accept: application/vnd.github+json" \
             -H "X-GitHub-Api-Version: 2022-11-28" \
-            -H "Authorization: Bearer ${{ inputs.ruleset-id }}" \
+            -H "Authorization: Bearer ${{ secrets.github-token }}" \
             https://api.github.com/repos/${{ github.repository }}/rulesets/${{ inputs.ruleset-id }}
