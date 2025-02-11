@@ -1,0 +1,30 @@
+name: branch-locker
+
+on:
+  workflow_call:
+    inputs:
+      ruleset-id:
+        type: string
+        description: "Target ruleset id to remove"
+        required: true
+    secrets:
+      github-token:
+        description: "GitHub Token"
+        required: true
+
+jobs:
+  unlock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Release lock from stage
+        run: |
+          if [ -z "${{ inputs.ruleset-id }}" ]; then
+            echo "Ruleset ID is not set. Skip releasing lock."
+            exit 0
+          fi
+          curl -s -L \
+            -X DELETE \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            -H "Authorization: Bearer ${{ secrets.github-token }}" \
+            https://api.github.com/repos/${{ github.repository }}/rulesets/${{ inputs.ruleset-id }}
