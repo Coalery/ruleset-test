@@ -11,11 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: call 1
-        uses: ./.github/workflows/common/test-env-share.yaml
+        uses: ./.github/workflows/common/test-env-share.yaml@stage
       - name: call 2
-        uses: ./.github/workflows/common/test-env-share.yaml
+        uses: ./.github/workflows/common/test-env-share.yaml@stage
   other-job:
     runs-on: ubuntu-latest
     steps:
       - name: call 3
-        uses: ./.github/workflows/common/test-env-share.yaml
+        uses: ./.github/workflows/common/test-env-share.yaml@stage
