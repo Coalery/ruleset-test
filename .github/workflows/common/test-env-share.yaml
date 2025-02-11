@@ -1,0 +1,15 @@
+name: test-env-share-across-several-calls
+
+on: workflow_call
+
+jobs:
+  create-uuid:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create UUID
+        id: create-uuid
+        run: |
+          if [ -z "${{ env.SOME_ID }}" ]; then
+            echo "SOME_ID=$(uuidgen)" >> $GITHUB_ENV
+          fi
+          echo "${{ env.SOME_ID }}"
