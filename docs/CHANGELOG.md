@@ -1,3 +1,18 @@
+## [1.1.14-rc.2](https://github.com/Coalery/ruleset-test/compare/v1.1.14-rc.1...v1.1.14-rc.2) (2025-02-11)
+
+
+### CI
+
+* add branch ([6523a78](https://github.com/Coalery/ruleset-test/commit/6523a782d878d78f3bfe7e151e541c6e2fc21643))
+* branch lock unlock 추가 ([d0a86be](https://github.com/Coalery/ruleset-test/commit/d0a86bec27e7e699c324a0a52fa4fae31c1d79f3))
+* github token을 secret으로 수정 ([d455936](https://github.com/Coalery/ruleset-test/commit/d455936da93dd331be2db747bf351facb94b1a7a))
+* repository 추가 ([ec9824d](https://github.com/Coalery/ruleset-test/commit/ec9824d1cbbb471609c87f080aa2ec78b458542c))
+* reusable workflow 적용 ([052089f](https://github.com/Coalery/ruleset-test/commit/052089f97210898eeceff0cbf51ad04fdf5d8802))
+* run id test ([5248e8e](https://github.com/Coalery/ruleset-test/commit/5248e8eda29ab471aaf90863d4813beecc8f19cc))
+* test-env-share ([ef2a1cb](https://github.com/Coalery/ruleset-test/commit/ef2a1cb1393e2811912e41c12524a474c117dffe))
+* 경로 수정 ([306a2de](https://github.com/Coalery/ruleset-test/commit/306a2dec45a4cb4373c4c983766842e5bf40cfdf))
+* 에러 수정 ([d5f8887](https://github.com/Coalery/ruleset-test/commit/d5f8887943945433b9f5f5b46867f8e68c20ae26))
+
 ## [1.1.14-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.13...v1.1.14-rc.1) (2024-10-20)
 
 
