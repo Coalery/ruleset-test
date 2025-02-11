@@ -8,10 +8,10 @@ on:
 
 jobs:
   test-job:
-    uses: Coalery/ruleset-test/.github/workflows/common/test-env-share.yaml@stage
+    uses: Coalery/ruleset-test/.github/workflows/test-env-share.yaml@stage
 
   other-job:
-    uses: Coalery/ruleset-test/.github/workflows/common/test-env-share.yaml@stage
+    uses: Coalery/ruleset-test/.github/workflows/test-env-share.yaml@stage
 
   another-job:
-    uses: Coalery/ruleset-test/.github/workflows/common/test-env-share.yaml@stage
+    uses: Coalery/ruleset-test/.github/workflows/test-env-share.yaml@stage
