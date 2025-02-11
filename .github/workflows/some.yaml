@@ -7,11 +7,43 @@ on:
       - stage
 
 jobs:
+  lock-stage:
+    name: Lock stage
+    if: github.ref == 'refs/heads/main'
+    uses: Coalery/ruleset-test/.github/workflows/branch-lock.yaml@stage
+    with:
+      branch-name: stage
+    secrets:
+      github-token: ${{ secrets.API_PAT }}
+
   test-job:
-    uses: Coalery/ruleset-test/.github/workflows/test-env-share.yaml@stage
+    name: Test job
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
 
-  other-job:
-    uses: Coalery/ruleset-test/.github/workflows/test-env-share.yaml@stage
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"
+      - name: Install dependencies
+        run: npm ci
+      - name: Wait 3 seconds
+        run: sleep 3
+      - name: Semantic release
+        run: npx semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.SEMANTIC_RELEASE_PAT }}
 
-  another-job:
-    uses: Coalery/ruleset-test/.github/workflows/test-env-share.yaml@stage
+  release-stage:
+    name: Release stage
+    if: github.ref == 'refs/heads/main' && always()
+    needs:
+      - lock-stage
+      - test-job
+    uses: Coalery/ruleset-test/.github/workflows/branch-unlock.yaml@stage
+    with:
+      ruleset-id: ${{ needs.lock-stage.outputs.ruleset-id }}
+    secrets:
+      github-token: ${{ secrets.API_PAT }}
