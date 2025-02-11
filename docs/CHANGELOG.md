@@ -1,3 +1,10 @@
+## [1.1.15-rc.1](https://github.com/Coalery/ruleset-test/compare/v1.1.14...v1.1.15-rc.1) (2025-02-11)
+
+
+### CI
+
+* 로컬 경로로 가리키도록 수정 ([0174ae2](https://github.com/Coalery/ruleset-test/commit/0174ae2166ed1fc44a70c2d27ad63f3033af41d3))
+
 ## [1.1.14](https://github.com/Coalery/ruleset-test/compare/v1.1.13...v1.1.14) (2025-02-11)
 
 
