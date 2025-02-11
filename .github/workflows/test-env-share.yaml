@@ -9,7 +9,4 @@ jobs:
       - name: Create UUID
         id: create-uuid
         run: |
-          if [ -z "${{ env.SOME_ID }}" ]; then
-            echo "SOME_ID=$(uuidgen)" >> $GITHUB_ENV
-          fi
-          echo "${{ env.SOME_ID }}"
+          echo "${{ github.run_id }}"
